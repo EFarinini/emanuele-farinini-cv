@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Emanuele Farinini, PhD - Chemometrician, consultant in Design of Experiments, multivariate analysis, and process monitoring. Co-developer of CAT software.">
+    <meta name="keywords" content="Emanuele Farinini, chemometrics, experimental design, multivariate analysis, CAT software, chemometric consulting">
+    <meta name="author" content="Emanuele Farinini">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Emanuele Farinini, PhD - Curriculum Vitae">
+    <meta property="og:description" content="Chemometrician specializing in experimental design and multivariate analysis">
+    <meta property="og:url" content="https://efarinini.github.io">
+    
+    <title>Emanuele Farinini, PhD - Curriculum Vitae</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    
+    <style>
+        /* ================================
+           CSS VARIABLES - DESIGN SYSTEM
+           ================================ */
+        :root {
+            /* Colors */
+            --primary: #000000;
+            --secondary: #1E90FF;
+            --accent: #4DB6AC;
+            
+            /* Text Colors */
+            --text: #FFFFFF;
+            --text-light: #D0D0D0;
+            --text-lighter: #A0A0A0;
+            --text-muted: #999999;
+            
+            /* Background Colors */
+            --bg-black: #000000;
+            --bg-dark: #121212;
+            --bg-dark-lighter: #1E1E1E;
+            --bg-dark-light: #272727;
+            --bg-gray: #2a2a2a;
+            
+            /* UI Colors */
+            --border: #333333;
+            --border-light: #404040;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.5);
+            --glow: rgba(30, 144, 255, 0.4);
+            --glow-light: rgba(30, 144, 255, 0.2);
+            
+            /* Typography */
+            --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            
+            /* Border Radius */
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Transitions */
+            --transition: all 0.3s ease;
+            --transition-fast: all 0.15s ease;
+        }
+
+        /* ================================
+           GLOBAL STYLES
+           ================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-black);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ================================
+           BROWSER BAR
+           ================================ */
+        .browser-bar {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            padding: 8px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 40px;
+        }
+
+        .browser-tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-dark);
+            padding: 4px 12px;
+            border-radius: 6px 6px 0 0;
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .tab-icon {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .tab-title {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* ================================
+           HEADER
+           ================================ */
+        .header {
+            position: fixed;
+            top: 40px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 999;
+            padding: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-cube {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #4da3ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ================================
+           HERO SECTION WITH PROFILE
+           ================================ */
+        .hero-fullscreen {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 120px;
+        }
+
+        .hero-backgrounds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            animation: kenBurns 20s ease-out infinite;
+        }
+
+        .hero-bg-slide.active {
+            opacity: 1;
+        }
+
+        @keyframes kenBurns {
+            0% { transform: scale(1) translateX(0); }
+            50% { transform: scale(1.1) translateX(-2%); }
+            100% { transform: scale(1) translateX(0); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                rgba(0, 0, 0, 0.7) 0%, 
+                rgba(0, 0, 0, 0.85) 50%, 
+                rgba(0, 0, 0, 0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content-centered {
+            position: relative;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-image-container {
+            position: relative;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary);
+            box-shadow: 0 20px 60px rgba(30, 144, 255, 0.3);
+            transition: var(--transition);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 80px rgba(30, 144, 255, 0.4);
+        }
+
+        .hero-text-content {
+            text-align: left;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text);
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-title .highlight {
+            color: var(--secondary);
+            text-shadow: 0 0 30px rgba(77, 163, 255, 0.5);
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-dots {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 4;
+        }
+
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero-dot.active {
+            background-color: var(--secondary);
+            transform: scale(1.3);
+        }
+
+        /* ================================
+           SECTIONS
+           ================================ */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--bg-dark);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, var(--bg-dark-light) 0%, transparent 70%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            color: var(--text);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ================================
+           CONTENT CARDS
+           ================================ */
+        .content-grid {
+            display: grid;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background-color: var(--bg-dark-light);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(30, 144, 255, 0.2);
+            border-color: var(--secondary);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-sm);
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .card-content {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .card-content p {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .card-content strong {
+            color: var(--text);
+        }
+
+        /* ================================
+           CARD WITH IMAGE
+           ================================ */
+        .card-with-image {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .card-image {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .card-image:hover {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        /* ================================
+           SKILLS GRID
+           ================================ */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            background-color: var(--bg-dark);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--secondary);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-item:hover {
+            background-color: var(--bg-dark-lighter);
+            border-left-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .skill-item i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .skill-item img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        /* ================================
+           PUBLICATIONS
+           ================================ */
+        .publication-item {
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm);
+            background-color: var(--bg-dark);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .publication-item:hover {
+            background-color: var(--bg-dark-lighter);
+            transform: translateX(5px);
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.1rem;
+        }
+
+        .publication-authors {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .publication-journal {
+            color: var(--secondary);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* ================================
+           CONTACT INFO
+           ================================ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: var(--bg-dark);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background-color: var(--bg-dark-lighter);
+            border-color: var(--secondary);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .contact-value {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .contact-value a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            color: var(--secondary);
+        }
+
+        /* ================================
+           DEMO SECTION
+           ================================ */
+        .demo-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--border);
+            margin: 20px 0;
+            transition: var(--transition);
+        }
+
+        .demo-image:hover {
+            border-color: var(--secondary);
+            transform: scale(1.02);
+        }
+
+        /* ================================
+           PRESENTATION SECTION
+           ================================ */
+        .presentation-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .presentation-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .presentation-image:hover {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        /* ================================
+           FOOTER
+           ================================ */
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border);
+            margin-top: 0;
+        }
+
+        .footer p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--accent);
+        }
+
+        /* ================================
+           RESPONSIVE DESIGN
+           ================================ */
+        @media (max-width: 768px) {
+            .header {
+                height: 70px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .hero-fullscreen {
+                margin-top: 110px;
+            }
+
+            .hero-content-centered {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text-content {
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card-with-image {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .presentation-images {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: var(--spacing-sm);
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* ================================
+           PRINT STYLES
+           ================================ */
+        @media print {
+            .browser-bar,
+            .header,
+            .hero-dots,
+            .footer {
+                display: none;
+            }
+
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            .hero-fullscreen {
+                height: auto;
+                margin-top: 0;
+                padding: 40px 0;
+            }
+
+            .hero-overlay {
+                display: none;
+            }
+
+            .section::before {
+                display: none;
+            }
+
+            .card {
+                border: 1px solid #ddd;
+                box-shadow: none;
+                background-color: #f9f9f9;
+                break-inside: avoid;
+            }
+
+            .hero-title,
+            .section-title,
+            .card-title {
+                color: black;
+            }
+
+            .hero-title .highlight {
+                color: #0066cc;
+            }
+
+            a {
+                color: #0066cc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Browser Bar -->
+    <div class="browser-bar">
+        <div class="browser-tab">
+            <div class="tab-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <span class="tab-title">Emanuele Farinini - CV</span>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-cube"><i class="fas fa-user-graduate"></i></div>
+                Emanuele<span>Farinini</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#contact" class="btn btn-secondary">Contact</a>
+            </nav>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Profile Photo -->
+    <section class="hero-fullscreen">
+        <!-- Background Images Container -->
+        <div class="hero-backgrounds">
+            <div class="hero-bg-slide active" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);"></div>
+            <div class="hero-bg-slide" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);"></div>
+            <div class="hero-bg-slide" style="background: linear-gradient(135deg, #232526 0%, #414345 100%);"></div>
+            <div class="hero-bg-slide" style="background: linear-gradient(135deg, #2c1810 0%, #8b4513 50%, #2c1810 100%);"></div>
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Centered Content with Profile Photo -->
+        <div class="container">
+            <div class="hero-content-centered">
+                <div class="profile-image-container">
+                    <img src="images/Emanuele Farinini.webp" alt="Emanuele Farinini" class="profile-image">
+                </div>
+                
+                <div class="hero-text-content">
+                    <span class="hero-subtitle">PhD in Chemistry and Materials Science</span>
+                    
+                    <h1 class="hero-title">
+                        <span class="highlight">EMANUELE</span><br>
+                        <span class="highlight">FARININI</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Chemometrician specializing in experimental design, multivariate analysis,<br>
+                        and process monitoring for industrial applications
+                    </p>
+                    
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                        <a href="https://chemometricsolutions.com" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-globe"></i> ChemometricSolutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dots Navigation -->
+        <div class="hero-dots">
+            <span class="hero-dot active" data-slide="0"></span>
+            <span class="hero-dot" data-slide="1"></span>
+            <span class="hero-dot" data-slide="2"></span>
+            <span class="hero-dot" data-slide="3"></span>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Information</h2>
+                <p class="section-subtitle">Get in touch for chemometric consulting and collaboration</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Mobile</div>
+                        <div class="contact-value">+39 333 6908545</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:emanuelefarinini@gmail.com">emanuelefarinini@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Website</div>
+                        <div class="contact-value">
+                            <a href="https://chemometricsolutions.com" target="_blank">chemometricsolutions.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">
+                            <a href="https://www.linkedin.com/in/emanuele-farinini-609a0a147/" target="_blank">Emanuele Farinini</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">ORCID</div>
+                        <div class="contact-value">0000-0003-4356-9371</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Genoa, Italy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 40px;">
+                <div class="card-content" style="text-align: center;">
+                    <p>Born in Genoa (Italy) on October 31, 1994. Chemometrician specializing in experimental design, multivariate analysis, and process monitoring for industrial applications. Co-developer of CAT (Chemometric Agile Tool) software and active consultant in collaboration with Professor Riccardo Leardi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">PhD in Sciences and Technologies of Chemistry and Materials</h3>
+                        <span class="card-meta">March 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Specialization:</strong> Pharmaceuticals, Cosmetic, and Food Sciences</p>
+                        <p><strong>Doctoral Thesis:</strong> "Use of Experimental Design and Multivariate Analysis for solving industrial problems"</p>
+                        <p>Research conducted in the Analytical Chemistry and Chemometrics Research Group in collaboration with manufacturing industries and international research groups.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Master's Degree in Pharmacy and Industrial Pharmacy</h3>
+                        <span class="card-meta">July 2018</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>University:</strong> University of Genova</p>
+                        <p><strong>Grade:</strong> 110/110</p>
+                        <p><strong>Thesis:</strong> "Innovative lycopene extraction and biological evaluation of the extract"</p>
+                        <p>Published in ChERD (Chemical Engineering Research and Design) with patent WO2021090250A1 for the SoLVE extraction process. Served as student representative and member of the Executive Committee of the Department of Pharmacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Chemometric Consultant</h3>
+                        <span class="card-meta">2020 - Present</span>
+                    </div>
+                    <div class="card-content">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <img src="images/logo-icon.png" alt="ChemometricSolutions Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                            <div>
+                                <h4 style="color: var(--text); margin: 0 0 5px 0;">ChemometricSolutions</h4>
+                                <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">Professional consulting in collaboration with Professor Riccardo Leardi</p>
+                            </div>
+                        </div>
+                        <p>Focusing on solving industrial problems using chemometric techniques for pharmaceutical, food, and chemical industries worldwide.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                Experimental Design
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs"></i>
+                                Process Optimization
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-desktop"></i>
+                                Multivariate Process Monitoring
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-quality"></i>
+                                Multivariate Quality Control
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-layer-group"></i>
+                                Data Fusion Calibration
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-image"></i>
+                                Image Analysis
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">R&D Scientist</h3>
+                        <span class="card-meta">August 2018 - December 2019</span>
+                    </div>
+                    <div class="card-content">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <img src="images/chiesi.webp" alt="Chiesi Farmaceutici Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                            <div>
+                                <h4 style="color: var(--text); margin: 0 0 5px 0;">Chiesi Limited UK</h4>
+                                <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">Chippenham, Wiltshire, United Kingdom</p>
+                            </div>
+                        </div>
+                        <p><strong>Departments:</strong> Early Product Development (EPD) and Chemical Manufacturing and Control (CMC)</p>
+                        <p>Focused on pharmaceutical research and development with emphasis on analytical chemistry and process control.</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section with CAT Logo -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Software Development & Programming</h3>
+                    </div>
+                    <div class="card-content">
+                        <h4 style="color: var(--text); margin-bottom: 15px;">Programming Languages</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                Python
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                MATLAB
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-calculator"></i>
+                                R
+                            </div>
+                        </div>
+
+                        <h4 style="color: var(--text); margin: 30px 0 15px 0;">Development Skills</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                Full-stack web development
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                Python web applications (Streamlit)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-tools"></i>
+                                Custom analytical tools
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar"></i>
+                                Data visualization dashboards
+                            </div>
+                            <div class="skill-item">
+                                <img src="images/cat-logo.PNG" alt="CAT Software" style="width: 20px; height: 20px;">
+                                CAT (Chemometric Agile Tool)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-layer-group"></i>
+                                BasiCAT co-developer
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background-color: var(--bg-dark); border-radius: var(--radius); border-left: 3px solid var(--secondary);">
+                            <h4 style="color: var(--text); margin-bottom: 15px;">Professional Portfolio</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fab fa-github" style="color: var(--secondary); font-size: 1.2rem;"></i>
+                                    <span style="color: var(--text-light);"><strong>GitHub Repository:</strong> <a href="https://github.com/EFarinini/chemometricsolutions-demo" target="_blank" style="color: var(--secondary); text-decoration: none;">chemometricsolutions-demo</a></span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fab fa-youtube" style="color: var(--secondary); font-size: 1.2rem;"></i>
+                                    <span style="color: var(--text-light);"><strong>Educational Content:</strong> <a href="https://www.youtube.com/channel/UCVIUJAhMVR0a59m3BG_dR0A" target="_blank" style="color: var(--secondary); text-decoration: none;">CAT Software Tutorials</a></span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-download" style="color: var(--secondary); font-size: 1.2rem;"></i>
+                                    <span style="color: var(--text-light);"><strong>Software Distribution:</strong> <a href="http://gruppochemiometria.it/index.php/software" target="_blank" style="color: var(--secondary); text-decoration: none;">CAT & BasiCAT Downloads</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Chemometric Techniques</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-flask"></i>
+                                Experimental Design (DoE)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-project-diagram"></i>
+                                Principal Component Analysis (PCA)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-area"></i>
+                                Partial Least Squares (PLS)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-monitor-waveform"></i>
+                                Multivariate Process Monitoring
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-clipboard-check"></i>
+                                Quality by Design (QbD)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-merge"></i>
+                                Data Fusion Approaches
+                            </div>
+                        </div>
+                        
+                        <!-- Software Demo Screenshot -->
+                        <div style="margin-top: 30px;">
+                            <h4 style="color: var(--text); margin-bottom: 15px;">Interactive Web Application</h4>
+                            <img src="images/streamlit-dashboard.webp" alt="Streamlit Dashboard Interface" class="demo-image">
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted); text-align: center;">
+                                Interactive Streamlit dashboard for chemometric analysis with real-time data visualization
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching & Presentations Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Teaching & Presentations</h2>
+                <p class="section-subtitle">Academic teaching and industry presentations</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Academic Teaching</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-university"></i>
+                                University of Modena - "Chemometric Tools for Process Monitoring"
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                University of Genoa - PhD course "Experimental design and multivariate analysis"
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-school"></i>
+                                University of Genoa - Chemometrics Schools (2020-2023)
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-book-reader"></i>
+                                Reviewer - Chemometrics and Intelligent Laboratory Systems
+                            </div>
+                        </div>
+                        
+                        <!-- Presentation Photos -->
+                        <div class="presentation-images">
+                            <img src="images/emanuele-.webp" alt="Conference Presentation" class="presentation-image">
+                            <img src="images/ris.webp" alt="Academic Presentation" class="presentation-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Clients Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Consulting Clients</h2>
+                <p class="section-subtitle">Pharmaceutical, food, and chemical industries worldwide</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="images/Agras_delic.webp" alt="Agras Delic" style="width: 24px; height: 24px; object-fit: contain;">
+                    Agras Delic (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/biofer.webp" alt="Biofer" style="width: 24px; height: 24px; object-fit: contain;">
+                    Biofer S.p.A. (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/bracco.webp" alt="Bracco" style="width: 24px; height: 24px; object-fit: contain;">
+                    Bracco (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/cambrex.webp" alt="Cambrex" style="width: 24px; height: 24px; object-fit: contain;">
+                    Cambrex Profarmaco (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/cementirossi.webp" alt="Cementi Rossi" style="width: 24px; height: 24px; object-fit: contain;">
+                    Cementi Rossi S.p.A. (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/chiesi.webp" alt="Chiesi" style="width: 24px; height: 24px; object-fit: contain;">
+                    Chiesi Farmaceutici (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src=images/Dow_Chemical_Company.webp" alt="Dow Chemical" style="width: 24px; height: 24px; object-fit: contain;">
+                    Dow Chemical Company (USA)
+                </div>
+                <div class="skill-item">
+                    <img src="images/edacious.webp" alt="Edacious" style="width: 24px; height: 24px; object-fit: contain;">
+                    Edacious (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/ferrero.webp" alt="Ferrero" style="width: 24px; height: 24px; object-fit: contain;">
+                    Ferrero (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/fileni.webp" alt="Fileni" style="width: 24px; height: 24px; object-fit: contain;">
+                    Fileni (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/fis.webp" alt="FIS" style="width: 24px; height: 24px; object-fit: contain;">
+                    FIS (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/haitalia.webp" alt="HA Italia" style="width: 24px; height: 24px; object-fit: contain;">
+                    HA Italia (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/lavazza.webp" alt="Lavazza" style="width: 24px; height: 24px; object-fit: contain;">
+                    Lavazza (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/merck.webp" alt="Merck" style="width: 24px; height: 24px; object-fit: contain;">
+                    Merck Serono (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/Mozarc.webp" alt="Mozarc Medical" style="width: 24px; height: 24px; object-fit: contain;">
+                    Mozarc Medical (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/Olon.webp" alt="Olon" style="width: 24px; height: 24px; object-fit: contain;">
+                    Olon S.p.A. (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/perkinelmer.webp" alt="Perkin Elmer" style="width: 24px; height: 24px; object-fit: contain;">
+                    Perkin-Elmer (USA)
+                </div>
+                <div class="skill-item">
+                    <img src="images/procos.webp" alt="Procos" style="width: 24px; height: 24px; object-fit: contain;">
+                    Procos SPA (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/roquette.webp" alt="Roquette" style="width: 24px; height: 24px; object-fit: contain;">
+                    Roquette Italia S.P.A. (Italy)
+                </div>
+                <div class="skill-item">
+                    <img src="images/zooprofilattico.webp" alt="Istituto Zooprofilattico" style="width: 24px; height: 24px; object-fit: contain;">
+                    Istituto Zooprofilattico Sperimentale (Italy)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section with Book Cover -->
+    <section class="section" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Scientific Publications</h2>
+                <p class="section-subtitle">16 peer-reviewed papers, 1 book chapter, 19 conference communications</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"> Publications</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="publication-item">
+                            <div class="publication-title">The complex phenotype and function of spinal cord microglia during ALS progression and the impact of metabotropic glutamate receptor type 5 down-regulation in SOD1G93A mice</div>
+                            <div class="publication-authors">Balbi, M.; Torazza, C.; Altosole, T.; Ravera, S.; <strong>Farinini, E.</strong>; Tessitore, S.; Bacchetti, F.; Rosso, F.; Musante, I.; Alfei, S.; Cerminara, M.; Puliti, A.; Filaci, G.; Fenoglio, D.; Leardi, R.; Fedele, E.; Bonanno, G.; Milanese, M.; Bonifacino, T.</div>
+                            <div class="publication-journal">Neurobiology of Disease (2025)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Chemometric Optimization of Cemented Paste Backfill solutions</div>
+                            <div class="publication-authors">Ascensão, G.; <strong>Farinini, E.</strong>; Paiva, H.; Ferreira, V.M.; Leardi, R.</div>
+                            <div class="publication-journal">CEES - Construction, Energy, Environment and Sustainability (2025)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Development of Eco-efficient Limestone Calcined Clay Cement (LC3) Mortars by a Multi-step Experimental Design</div>
+                            <div class="publication-authors">Ascensão, G.; <strong>Farinini, E.</strong>; Ferreira, V.M.; Leardi, R.</div>
+                            <div class="publication-journal">Chemometrics and Intelligent Laboratory Systems Journal (2024)</div>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <div class="publication-title">Blue CdSe/CdS core/crown nanoplatelet light-emitting diodes obtained via a design-of-experiments approach</div>
+                            <div class="publication-authors">Cirignano, M., Roshan, H., <strong>Farinini, E.</strong>, Di Giacomo, A., Fiorito, S., Piccinotti, D., Khabbazabkenar, S., Di Stasio, F., Moreels, I.</div>
+                            <div class="publication-journal">Nanoscale (2024)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Chestnut Episperm as a Promising Natural Source of Phenolics from Agri-Food Processing by-Products: Optimisation of a Sustainable Extraction Protocol by Ultrasounds</div>
+                            <div class="publication-authors">Donno, D.; Turrini, F.; <strong>Farinini E.</strong>; Mellano M.G.; Boggia R.; Beccaro G.L.; Gamba G.</div>
+                            <div class="publication-journal">Agriculture (2024)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Experimental Design approach applied to the removal of personal care products from urban wastewater through γ-cyclodextrin polymers</div>
+                            <div class="publication-authors">Forni, F.; <strong>Farinini, E.</strong>; Leardi, R.; Rinaldo, A.</div>
+                            <div class="publication-journal">Journal of Environmental Management (2023)</div>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <div class="publication-title">Supervised classification combined with genetic algorithm variable selection for a fast identification of polymeric microdebris using infrared reflectance</div>
+                            <div class="publication-authors">Ferreiro, B.; <strong>Farinini, E.</strong>; Leardi, R.; Andrade, J.</div>
+                            <div class="publication-journal">Marine Pollution Bulletin (2023)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Two photons are better than one: continuous flow synthesis of β-lactones through a doubly photochemically-activated Paternò Büchi reaction</div>
+                            <div class="publication-authors">Minuto, F.; <strong>Farinini, E.</strong>; Leardi, R.; Solokha, P.; Basso, A.</div>
+                            <div class="publication-journal">Journal of Flow Chemistry (2023)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Tailoring Water-based Graphite Conductive Ink Formulation for Enzyme Stencil-Printing: Experimental Design to Enhance Wearable Biosensors Performance</div>
+                            <div class="publication-authors">Marchianò, V.; Tricase, A.; Caputo, M.; <strong>Farinini, E.</strong>; Leardi, R.; Imbriano, A.; Leech, D.; Kidayaveettil, R.; Gentile, L.; Torsi, L.; Macchia, E.; Bollella, P.</div>
+                            <div class="publication-journal">Chemistry of Materials (2023)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">PLX4032 resistance of patient-derived melanoma cells: crucial role of oxidative metabolism</div>
+                            <div class="publication-authors">Garbarino, O.; Valenti, G. E.; Monteleone L.; Pietra, G.; Mingari, M. C.; Benzi, A.; Santina Bruzzone, S.; Ravera, S.; L., Leardi, R.; <strong>Farinini E.</strong>; Vernazza, S.; Grottoli, M.; Marengo, B.; Domenicotti, C.</div>
+                            <div class="publication-journal">Front Oncol (2023)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Intra-source provenance study on Monte Arci (Sardinia) obsidian by pXRF: Role of the data acquisition and analysis tools</div>
+                            <div class="publication-authors">Mameli, V.; Sanna Angotzi, M.; <strong>Farinini, E.</strong>; Leardi, R.; Lugliè, C.; Cannas, C.</div>
+                            <div class="publication-journal">Heliyon (2023)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Multi-Elemental Analysis as a Tool to Ascertain the Safety and the Origin of Beehive Products: Development, Validation, and Application of an ICP-MS Method on Four Unifloral Honeys Produced in Sardinia, Italy</div>
+                            <div class="publication-authors">Mara, A.; Deidda, S.; Caredda, M.; Ciulu, M.; Deroma, M.; <strong>Farinini, E.</strong>; Floris, I.; Langasco, I.; Leardi, R.; Pilo, M.I.; Spano, N.; Sanna, G.</div>
+                            <div class="publication-journal">Molecules (2022)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">A Preliminary Color Study of Different Basil-Based Semi-Finished Products during Their Storage</div>
+                            <div class="publication-authors">Turrini, F.; <strong>Farinini, E.</strong>; Leardi, R.; Grasso, F.; Orlandi, V.; Boggia, R.</div>
+                            <div class="publication-journal">Molecules (2022)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Effects of visual training on motor performance in young tennis players using FitLight Trainer</div>
+                            <div class="publication-authors">Forni, F.; <strong>Farinini, E.</strong>; Leardi, R.; Rinaldo, A.</div>
+                            <div class="publication-journal">The Journal of sports medicine and physical fitness (2021)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Potential Role of miRNAs in the Acquisition of Chemoresistance in Neuroblastoma</div>
+                            <div class="publication-authors">Marengo, B.; Pulliero, A.; Corrias, M. V.; Leardi, R.; <strong>Farinini, E.</strong>; Fronza, G.; Domenicotti, C.</div>
+                            <div class="publication-journal">Journal of personalized medicine (2021)</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">PKCα Inhibition as a Strategy to Sensitize Neuroblastoma Stem Cells to Etoposide by Stimulating Ferroptosis</div>
+                            <div class="publication-authors">Monteleone, L.; Speciale, A.; Valenti, G. E.; Leardi, R.; <strong>Farinini, E.</strong>; Traverso, N.; Ravera, S.; Garbarino, O.; Domenicotti, C</div>
+                            <div class="publication-journal">Antioxidants (2021)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-with-image">
+                        <div>
+                            <div class="card-header">
+                                <h3 class="card-title">Book Chapter</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="publication-item">
+                                    <div class="publication-title">Statistical Experimental Design</div>
+                                    <div class="publication-authors">Leardi, R.; <strong>Farinini, E.</strong></div>
+                                    <div class="publication-journal">Basic Chemometrics for Analytical Chemists, World Scientific Publishing (2025)</div>
+                                </div>
+                                <p style="margin-top: 15px;">
+                                    Co-authored a comprehensive chapter on experimental design methodologies in the authoritative textbook for analytical chemists.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="images/book-cover.webp" alt="Basic Chemometrics for Analytical Chemists Book Cover" class="card-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conference Communications</h2>
+                <p class="section-subtitle">19 presentations at national and international conferences</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Recent Conference Presentations (2021-2024)</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="publication-item">
+                            <div class="publication-title">From batch to flow chemistry: study of an industrial reductive amination reaction</div>
+                            <div class="publication-authors">Buccioli, M.; <strong>Farinini, E.</strong>; Leardi, R.; Moro, A.; Maes, B.; Basso, A.</div>
+                            <div class="publication-journal">Ischia Advanced School of Organic Chemistry 2024 - IASOC24; Ischia, September 19-23, 2024</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Optimizing a sustainable approach: green extraction of anthocyanins from Apulian pigmented wheat landraces</div>
+                            <div class="publication-authors">Coniglio, C.; Calvano, C. D.; <strong>Farinini, E.</strong>; Cataldi, T.R.I.; Patruno, A.; Carriglia, M.; Longobardi, F.</div>
+                            <div class="publication-journal">XXVIII Congresso Nazionale della Società Chimica Italiana; Milano (IT), August 26-30, 2024</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Chemometrics and Industry: Application Examples with Focus on Main Challenges in Industrial Consulting</div>
+                            <div class="publication-authors">Leardi, R.; <strong>Farinini, E.</strong></div>
+                            <div class="publication-journal">Workshop on Industrial Applications; Ravenna (IT), 2024</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Functionalized carbon nanomaterials in cement, a multivariate approach</div>
+                            <div class="publication-authors">Amata, C.; Panizzi, S.; <strong>Farinini, E.</strong>; Lavagna, L.; Pavese, M.</div>
+                            <div class="publication-journal">European Conference on Composite Materials ECCM21; Nantes (FR), July 2-5, 2024</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Blue-emitting CdSe/CdS core-crowned nanoplatelets: the power of Design of Experiments on optical performances and LED fabrication</div>
+                            <div class="publication-authors">Cirignano, M.; Roshan, H.; Di Giacomo, A.; Piccinotti, D.; Fiorito, S.; Khabbazabkenar, S.; <strong>Farinini, E.</strong>; Leardi, R.; Prato, M.; Di Stasio, F.; Moreels, I.</div>
+                            <div class="publication-journal">14th International Conference on Optical Probes of Organic and Hybrid Semiconductors (OP2023); Como (IT), September 10-15, 2023</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Development of eco-efficient cements by a multi-step Experimental Design</div>
+                            <div class="publication-authors"><strong>Farinini, E.</strong>; Leardi, R.; Ascensão, G.</div>
+                            <div class="publication-journal">Colloquium Chemometricum Mediterraneum XI (CCMXI); Padova (IT), June 27-30, 2023</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Study of a doubly photochemically activated Paternò-Büchi Reaction through Design of Experiments</div>
+                            <div class="publication-authors">Minuto, F.; <strong>Farinini, E.</strong>; Leardi, R.; Solokha, P.; Basso, A.</div>
+                            <div class="publication-journal">XLVII "A. Corbella" International Summer School on Organic Synthesis (ISOS2023); Gargnano (IT), June 18-23, 2023</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Development of eco-efficient cements by a multi-step Experimental Design</div>
+                            <div class="publication-authors"><strong>Farinini, E.</strong>; Leardi, R.; Ascensão, G.</div>
+                            <div class="publication-journal">PhD day; Genova (IT), February 16, 2023</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Analytical Chemistry and Chemometrics Group of Genova: Focus on CAT Software</div>
+                            <div class="publication-authors">Leardi, R.; <strong>Farinini, E.</strong></div>
+                            <div class="publication-journal">Analytical Chemistry Workshop; L'Aquila (IT), 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Supervised classification combined with genetic algorithm variable selection for microplastics measured by infrared spectrometry</div>
+                            <div class="publication-authors">Ferreiro, B.; Andrade, J.M.; Leardi, R.; <strong>Farinini, E.</strong></div>
+                            <div class="publication-journal">XXVI Encontro Galego-Portugués de Química; Santiago De Compostela (ES); November 16-18, 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Experimental Design: study of an industrial reductive amination reaction</div>
+                            <div class="publication-authors">Buccioli, M.; <strong>Farinini, E.</strong>; Leardi, R.; Moro, A.; Basso, A.</div>
+                            <div class="publication-journal">XXII Congresso Nazionale Divisione Chimica Industriale; Catania (IT), November 7-8, 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Partial deletion of mGluR5 affects microglia inflammatory phenotype, bioenergetic characteristics, and red-ox state during ALS progression in SOD1G93A mice</div>
+                            <div class="publication-authors">Balbi, M.; Bonifacino, T.; Ravera, S.; Fenoglio, D.; Altosole, T.; Filaci G.; Leardi, R.; <strong>Farinini, E.</strong>; Cerminara, M.; Puliti, A.; Milanese, M.; Bonanno, G.</div>
+                            <div class="publication-journal">Federation European Neuroscience Society (FENS) Forum Congress; Paris (FR), July 9-13, 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">A chemometric approach for the development of a new cleaning strategy of iron stains on Carrara marbles and its evaluation through image analysis</div>
+                            <div class="publication-authors">Cardellicchio, F.; <strong>Farinini, E.</strong>; Malegori, C.; Leardi, R.; Salvi, A.M.; Olivieri, P.</div>
+                            <div class="publication-journal">XIX Congresso Nazionale della Divisione di Chimica dell'Ambiente e dei Beni Culturali; Turin (IT), June 20-23, 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">NLC synthesis optimization process of lycopene enriched S-CO2 extract</div>
+                            <div class="publication-authors">Cavagnero, C.; <strong>Farinini, E.</strong>; Gueguen, V.; Leardi, R.; Pavon-Djavid, G.; Botto, A.; Viscardi, G.</div>
+                            <div class="publication-journal">First Symposium for YouNg Chemists: Innovation and Sustainability (SYNC2022); Rome (IT), June 20-23, 2022</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Optimization of supercritical CO2 oil extraction from waste of tomatoes paste production</div>
+                            <div class="publication-authors">Cavagnero, C.; Micera, M.; Destefano, R.; <strong>Farinini, E.</strong>; Botto, A.; Leardi, R.; Viscardi, G.</div>
+                            <div class="publication-journal">Merck Young Chemists' Symposium 2021; Rimini (IT), November 22-24, 2021</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Product monitoring and exploratory analysis of historical data</div>
+                            <div class="publication-authors"><strong>Farinini, E.</strong>; Leardi R.</div>
+                            <div class="publication-journal">International Conference on NIR (ICNIRS), October 17-21, 2021</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Characterization of a raw material through analytical profiles and data fusion</div>
+                            <div class="publication-authors"><strong>Farinini, E.</strong>; Leardi R.</div>
+                            <div class="publication-journal">XXVII Congresso Nazionale della Società Chimica Italiana (SCI), September 14-23, 2021</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Characterization of a raw material through analytical profiles and data fusion</div>
+                            <div class="publication-authors"><strong>Farinini, E.</strong>; Leardi R.</div>
+                            <div class="publication-journal">XVIII Chemometrics in Analytical Chemistry (CAC), July 20-21, 2021</div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-title">Linking the performance of lithium sulfur batteries to electrode composition and electrolyte formulation through mixture process design of experiments</div>
+                            <div class="publication-authors">Venezia, E.; Ricci, M.; Salimi, P.; <strong>Farinini, E.</strong>; Zaccaria, R.P.</div>
+                            <div class="publication-journal">The International Conference on Lithium-Sulfur Batteries (ICLSB); June 28 - July 1, 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Athletic Achievements Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Athletic Achievements</h2>
+                <p class="section-subtitle">Applying analytical excellence to competitive rowing</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-medal"></i>
+                    Two CONI Bronze Medals for Athletic Value
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-trophy"></i>
+                    9th place - Coastal Rowing World Championships (2024)
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-crown"></i>
+                    Five-time Italian Rowing Champion (2015-2021)
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-utensils"></i>
+                    Top-ten finalist - IX Genova Pesto World Championship
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    Performance Analysis - Italian Olympic Team (Tokyo 2020)
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-water"></i>
+                    Statistical Analysis of Telemetry Data for Rowing Performance
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Languages</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-flag"></i>
+                    <strong>Italian:</strong> Native
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-flag"></i>
+                    <strong>English:</strong> Fluent
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-flag"></i>
+                    <strong>German:</strong> Basic
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-flag"></i>
+                    <strong>French:</strong> Basic
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © 2025 Emanuele Farinini, PhD - 
+                <a href="https://chemometricsolutions.com" target="_blank">ChemometricSolutions</a> | 
+                <a href="mailto:emanuelefarinini@gmail.com">emanuelefarinini@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero background carousel
+        const bgSlides = document.querySelectorAll('.hero-bg-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            bgSlides.forEach(slide => slide.classList.remove('active'));
+            heroDots.forEach(dot => dot.classList.remove('active'));
+            bgSlides[index].classList.add('active');
+            heroDots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            const next = (currentSlide + 1) % bgSlides.length;
+            showSlide(next);
+        }
+        
+        heroDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        setInterval(nextSlide, 5000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = 120;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile navigation toggle
+        const mobileToggle = document.querySelector('.mobile-nav-toggle');
+        const nav = document.querySelector('.nav');
+        
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
