@@ -1,0 +1,169 @@
+/* ================================
+   SERVICES SECTION - SOLO PER HOMEPAGE (index.html)
+   ChemometricSolutions
+   ================================ */
+
+/* Services Section Homepage */
+.home-services-section {
+    background-color: var(--bg-black);
+    position: relative;
+}
+
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-service-card {
+    background-color: var(--bg-dark-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.home-service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-xl), var(--glow-md);
+}
+
+.home-service-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-service-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, var(--bg-dark-light), transparent);
+}
+
+.home-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    filter: grayscale(30%) brightness(0.8);
+}
+
+.home-service-card:hover .home-service-image img {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1);
+}
+
+.home-service-content {
+    padding: 30px;
+    display: block;
+    text-align: center;
+}
+
+.home-service-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.home-service-description {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: var(--line-height-normal);
+    font-size: 0.95rem;
+    text-align: center;
+    display: block;
+}
+
+.home-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--secondary);
+    transition: var(--transition);
+    text-decoration: none;
+    margin: 20px auto 0;
+}
+
+.home-service-link:hover {
+    gap: 12px;
+    color: var(--secondary);
+}
+
+.home-service-link i {
+    font-size: 0.875rem;
+    transition: var(--transition);
+}
+
+/* Forza 3 colonne su schermi grandi */
+@media (min-width: 1200px) {
+    .home-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Override per evitare conflitti */
+.home-service-content > * {
+    grid-column: 1 / -1 !important;
+    float: none !important;
+}
+
+.service-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.service-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.service-image:hover .service-img {
+    transform: scale(1.05);
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlay-content i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}

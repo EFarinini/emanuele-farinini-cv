@@ -1,0 +1,248 @@
+/* ================================
+   CSS VARIABLES - DESIGN SYSTEM
+   ChemometricSolutions
+   ================================ */
+
+:root {
+    /* ========== COLORS ========== */
+    /* Primary Colors */
+    --primary: #000000;
+    --secondary: #1E90FF;
+    --accent: #4DB6AC;
+    
+    /* Text Colors */
+    --text: #FFFFFF;
+    --text-light: #D0D0D0;
+    --text-lighter: #A0A0A0;
+    --text-muted: #999999;
+    
+    /* Background Colors */
+    --bg-black: #000000;
+    --bg-dark: #121212;
+    --bg-dark-lighter: #1E1E1E;
+    --bg-dark-light: #272727;
+    --bg-gray: #2a2a2a;
+    
+    /* UI Colors */
+    --border: #333333;
+    --border-light: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --glow: rgba(30, 144, 255, 0.4);
+    --glow-light: rgba(30, 144, 255, 0.2);
+    
+    /* Status Colors */
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --info: var(--secondary);
+    
+    /* ========== TYPOGRAPHY ========== */
+    --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;     /* 12px */
+    --font-size-sm: 0.875rem;    /* 14px */
+    --font-size-base: 1rem;      /* 16px */
+    --font-size-lg: 1.125rem;    /* 18px */
+    --font-size-xl: 1.25rem;     /* 20px */
+    --font-size-2xl: 1.5rem;     /* 24px */
+    --font-size-3xl: 1.875rem;   /* 30px */
+    --font-size-4xl: 2.25rem;    /* 36px */
+    --font-size-5xl: 3rem;       /* 48px */
+    --font-size-6xl: 3.75rem;    /* 60px */
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+    
+    /* ========== SPACING ========== */
+    --spacing-xs: 0.25rem;    /* 4px */
+    --spacing-sm: 0.5rem;     /* 8px */
+    --spacing-md: 1rem;       /* 16px */
+    --spacing-lg: 1.5rem;     /* 24px */
+    --spacing-xl: 2rem;       /* 32px */
+    --spacing-2xl: 3rem;      /* 48px */
+    --spacing-3xl: 4rem;      /* 64px */
+    --spacing-4xl: 6rem;      /* 96px */
+    --spacing-5xl: 8rem;      /* 128px */
+    
+    /* ========== LAYOUT ========== */
+    --container-max-width: 1240px;
+    --container-padding: 20px;
+    
+    /* Section Spacing */
+    --section-padding: 120px;
+    --section-padding-tablet: 80px;
+    --section-padding-mobile: 60px;
+    
+    /* Grid */
+    --grid-gap: 30px;
+    --grid-gap-sm: 20px;
+    --grid-gap-lg: 40px;
+    
+    /* ========== BORDER RADIUS ========== */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 50%;
+    
+    /* ========== TRANSITIONS ========== */
+    --transition-fast: all 0.15s ease;
+    --transition: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Specific Transitions */
+    --transition-transform: transform 0.3s ease;
+    --transition-opacity: opacity 0.3s ease;
+    --transition-colors: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    
+    /* ========== Z-INDEX LAYERS ========== */
+    --z-dropdown: 1000;
+    --z-sticky: 1010;
+    --z-fixed: 1020;
+    --z-modal-backdrop: 1030;
+    --z-modal: 1040;
+    --z-popover: 1050;
+    --z-tooltip: 1060;
+    --z-toast: 1070;
+    
+    /* ========== BREAKPOINTS ========== */
+    /* Utilizzati nelle media queries */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+    
+    /* ========== ANIMATIONS ========== */
+    --animation-duration-fast: 0.15s;
+    --animation-duration-normal: 0.3s;
+    --animation-duration-slow: 0.5s;
+    --animation-duration-slower: 1s;
+    
+    /* Easing Functions */
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ========== COMPONENT SPECIFIC ========== */
+    /* Buttons */
+    --button-padding: 12px 32px;
+    --button-padding-sm: 8px 24px;
+    --button-padding-lg: 16px 40px;
+    --button-height: 44px;
+    --button-height-sm: 36px;
+    --button-height-lg: 52px;
+    
+    /* Cards */
+    --card-padding: 24px;
+    --card-padding-sm: 16px;
+    --card-padding-lg: 32px;
+    
+    /* Header */
+    --header-height: 80px;
+    --header-height-mobile: 70px;
+    
+    /* ========== EFFECTS ========== */
+    /* Box Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.4);
+    
+    /* Glows */
+    --glow-sm: 0 0 10px var(--glow-light);
+    --glow-md: 0 0 20px var(--glow);
+    --glow-lg: 0 0 30px var(--glow);
+    
+    /* Blurs */
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 16px;
+    --blur-xl: 24px;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: var(--section-padding-mobile);
+        --container-padding: 16px;
+        --grid-gap: var(--grid-gap-sm);
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --font-size-5xl: 2rem;
+        --font-size-4xl: 1.75rem;
+        --font-size-3xl: 1.375rem;
+        --spacing-3xl: 2rem;
+        --spacing-2xl: 1.5rem;
+    }
+}
+
+/* ========== DARK THEME READY ========== */
+/* Se in futuro vorrai aggiungere un tema chiaro, 
+   puoi utilizzare questa struttura */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Uncomment and adjust for light theme
+        --primary: #1E90FF;
+        --text: #333333;
+        --bg-black: #ffffff;
+        --bg-dark: #f8f9fa;
+        */
+    }
+}
+
+/* ========== UTILITY CUSTOM PROPERTIES ========== */
+/* Proprietà utilizzate per calcoli dinamici */
+:root {
+    --carousel-slide-duration: 4s;
+    --carousel-transition-duration: 1s;
+    --mobile-nav-width: 70%;
+    --floating-animation-distance: 20px;
+    --floating-animation-duration: 6s;
+}
+
+
+/* ========== MODIFICHE ALLE VARIABILI PER SERVICES ========== */
+
+:root {
+    /* Modifica il gap della griglia per cards più compatte */
+    --grid-gap: 25px; /* era 30px */
+    
+    /* Modifica il padding delle cards per contenuto più compatto */
+    --card-padding-lg: 25px; /* era 32px */
+    
+    /* Aggiungi una variabile per altezza immagine services */
+    --service-image-height: 160px; /* invece di 200px fisso */
+    
+    /* Migliora l'ombra per le cards */
+    --shadow: rgba(0, 0, 0, 0.4); /* era 0.3, ora più definita */
+    
+    /* Aggiungi una variabile per max-width delle cards */
+    --service-card-max-width: 380px; /* limita la larghezza massima */
+}

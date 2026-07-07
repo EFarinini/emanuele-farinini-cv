@@ -1,0 +1,551 @@
+/* ================================
+   TEAM SECTION - SEMPRE AFFIANCATE
+   ChemometricSolutions
+   ================================ */
+
+.team-section {
+    background-color: var(--bg-dark);
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Container per centrare meglio la griglia */
+.team-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+    justify-items: center;
+}
+
+.team-card {
+    background-color: var(--bg-dark-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-2xl), rgba(30, 144, 255, 0.15) 0 0 25px;
+}
+
+/* Foto più piccole per tutte le dimensioni */
+.team-image {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-dark-light);
+}
+
+.team-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, var(--bg-dark-light), transparent);
+    opacity: 0.8;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: var(--transition);
+    filter: none !important;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.08);
+    filter: none !important;
+}
+
+.team-content {
+    padding: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.team-name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.team-position {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.team-social a {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.team-social a:hover {
+    background-color: var(--secondary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.team-social i {
+    font-size: 0.85rem;
+}
+
+/* Link individuale per ogni profilo */
+.team-profile-link {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--secondary);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin-top: 3px;
+}
+
+.team-profile-link:hover {
+    background-color: var(--secondary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.team-profile-link i {
+    margin-left: 4px;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.team-profile-link:hover i {
+    transform: translateX(2px);
+}
+
+/* Link principale "Meet Our Full Team" */
+.team-main-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team-main-cta .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN - SEMPRE 2 COLONNE
+   ================================ */
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 60px 0;
+    }
+    
+    .team-container {
+        max-width: 500px;
+        padding: 0 15px;
+    }
+    
+    .team-grid {
+        gap: 20px;
+    }
+    
+    .team-card {
+        max-width: 220px;
+    }
+    
+    /* Foto ancora più piccole su tablet */
+    .team-image {
+        height: 140px;
+    }
+    
+    .team-content {
+        padding: 15px;
+    }
+    
+    .team-name {
+        font-size: 1rem;
+    }
+    
+    .team-position {
+        font-size: 0.85rem;
+    }
+    
+    .team-social a {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .team-social i {
+        font-size: 0.8rem;
+    }
+    
+    .team-profile-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+    .team-main-cta {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-container {
+        max-width: 420px;
+        padding: 0 10px;
+    }
+    
+    .team-grid {
+        gap: 15px;
+    }
+    
+    .team-card {
+        max-width: 190px;
+    }
+    
+    /* Foto compatte per mobile */
+    .team-image {
+        height: 120px;
+    }
+    
+    .team-image::after {
+        height: 40px;
+    }
+    
+    .team-content {
+        padding: 12px;
+    }
+    
+    .team-name {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+    
+    .team-position {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .team-social {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .team-social a {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .team-social i {
+        font-size: 0.75rem;
+    }
+    
+    .team-profile-link {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    .team-main-cta .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-container {
+        max-width: 380px;
+        padding: 0 8px;
+    }
+    
+    .team-grid {
+        gap: 12px;
+    }
+    
+    .team-card {
+        max-width: 170px;
+    }
+    
+    /* Foto molto compatte per schermi piccoli */
+    .team-image {
+        height: 100px;
+    }
+    
+    .team-content {
+        padding: 10px;
+    }
+    
+    .team-name {
+        font-size: 0.9rem;
+        line-height: 1.1;
+        margin-bottom: 3px;
+    }
+    
+    .team-position {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+    
+    .team-social {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    
+    .team-social a {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .team-social i {
+        font-size: 0.7rem;
+    }
+    
+    .team-profile-link {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .team-container {
+        max-width: 340px;
+        padding: 0 5px;
+    }
+    
+    .team-grid {
+        gap: 10px;
+    }
+    
+    .team-card {
+        max-width: 150px;
+    }
+    
+    /* Foto ultra compatte */
+    .team-image {
+        height: 90px;
+    }
+    
+    .team-content {
+        padding: 8px;
+    }
+    
+    .team-name {
+        font-size: 0.85rem;
+    }
+    
+    .team-position {
+        font-size: 0.7rem;
+    }
+    
+    .team-profile-link {
+        font-size: 0.65rem;
+        padding: 2px 5px;
+    }
+}
+
+/* ================================
+   CTA SECTION (ottimizzata)
+   ================================ */
+
+.cta {
+    padding: 70px 0;
+    background-color: var(--bg-black);
+    color: var(--text);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(30, 144, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: var(--text);
+    line-height: var(--line-height-tight);
+}
+
+.cta p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 1.05rem;
+    line-height: var(--line-height-normal);
+}
+
+@media (max-width: 768px) {
+    .cta {
+        padding: 50px 0;
+    }
+    
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ================================
+   TEAM SECTION INDEX — sempre 2 colonne affiancate
+   ================================ */
+
+.team-section .team-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 25px !important;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-section .team-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ================================
+   TEAM SECTION INDEX - FIX ULTRA SPECIFICO
+   ================================ */
+
+/* Selettore ultra-specifico che funziona SOLO per la sezione team nell'index */
+.team-section .team-grid[style*="max-width: 600px"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 25px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 2 !important;
+    justify-items: center !important;
+}
+
+/* Responsive per questo specifico team-grid */
+@media (max-width: 768px) {
+    .team-section .team-grid[style*="max-width: 600px"] {
+        gap: 20px !important;
+        max-width: 500px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-section .team-grid[style*="max-width: 600px"] {
+        gap: 15px !important;
+        max-width: 420px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-section .team-grid[style*="max-width: 600px"] {
+        gap: 12px !important;
+        max-width: 380px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .team-section .team-grid[style*="max-width: 600px"] {
+        gap: 10px !important;
+        max-width: 340px !important;
+    }
+}
+/* ================================
+   PROFILE SCIENTIFIC STATS
+   ================================ */
+
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 28px 0 36px;
+}
+
+.profile-stat {
+    background: linear-gradient(135deg, var(--bg-dark-light) 0%, rgba(30,144,255,0.08) 100%);
+    border: 1px solid rgba(30,144,255,0.2);
+    border-radius: var(--radius-lg);
+    padding: 20px 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.profile-stat:hover {
+    border-color: var(--secondary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(30,144,255,0.15);
+}
+
+.profile-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.profile-stat-label {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+@media (max-width: 576px) {
+    .profile-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

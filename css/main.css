@@ -1,0 +1,85 @@
+/* ================================
+   MAIN CSS FILE
+   ChemometricSolutions
+   ================================ */
+
+/* ========== BASE STYLES ========== */
+@import url('base/variables.css');
+@import url('base/reset.css');
+
+/* ========== LAYOUT ========== */
+@import url('layout/sections.css');
+
+/* ========== COMPONENTS ========== */
+@import url('components/buttons.css');
+@import url('components/navigation.css');
+
+/* ========== PAGES ========== */
+@import url('pages/home.css');
+@import url('pages/clients.css');
+@import url('pages/services.css');
+@import url('pages/about.css');
+@import url('pages/team.css');
+@import url('pages/footer.css');
+@import url('pages/about-page.css');
+@import url('pages/services-page.css');
+@import url('pages/team-page.css');
+@import url('pages/case-studies.css');
+@import url('pages/software-page.css');
+@import url('pages/contact-page.css');
+@import url('pages/publications-page.css');
+@import url('pages/privacy-page.css');
+
+/* ========== RESPONSIVE ========== */
+@import url('responsive/mobile.css');
+
+/* ========================================
+   ANIMATIONS & KEYFRAMES
+   ======================================== */
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Button Loading Animation */
+@keyframes button-spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Additional utilities not covered in base files */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}

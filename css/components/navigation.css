@@ -1,0 +1,335 @@
+/* ================================
+   NAVIGATION COMPONENT
+   ChemometricSolutions
+   ================================ */
+
+/* ========== TOP BROWSER BAR ========== */
+.browser-bar {
+    background-color: #202124;
+    color: #bdc1c6;
+    font-family: system-ui;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid #333;
+}
+
+.browser-tab {
+    display: flex;
+    align-items: center;
+    background-color: #35363a;
+    padding: 8px 16px;
+    border-radius: 8px 8px 0 0;
+    margin-left: 8px;
+    max-width: 260px;
+}
+
+.tab-icon {
+    background-color: #1E90FF;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-right: 10px;
+    transform: perspective(20px) rotateX(10deg) rotateY(10deg);
+}
+
+.tab-icon i {
+    color: white;
+    font-size: 14px;
+}
+
+.tab-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+/* ========== MAIN HEADER ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px var(--shadow);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+/* ========== LOGO ========== */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo .logo-cube {
+    color: var(--secondary);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.logo:hover .logo-cube {
+    transform: rotate(15deg);
+}
+
+.logo span {
+    color: var(--secondary);
+    margin-left: -0.3em; /* Spazio negativo per attaccare le parole */
+}
+
+/* ========== NAVIGATION MENU ========== */
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-left: auto; /* ← Questa riga spinge il menu a destra */
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    padding: 8px 0;
+    position: relative;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--secondary);
+}
+
+.nav-cta {
+    margin-left: 16px;
+}
+
+/* ========== MOBILE NAVIGATION ========== */
+.mobile-nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mobile-nav-toggle:hover {
+    color: var(--secondary);
+}
+
+
+
+
+
+.nav-close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 1200;
+}
+
+.nav-close:hover {
+    color: var(--secondary);
+}
+
+
+
+
+/* ========== RESPONSIVE NAVIGATION ========== */
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+    .nav {
+        gap: 20px;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .logo .logo-cube {
+        font-size: 1.8rem;
+    }
+}
+
+/* Medium Desktop */
+@media (max-width: 1024px) {
+    .nav {
+        gap: 16px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Desktop */
+@media (max-width: 900px) {
+    .nav {
+        gap: 12px;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--bg-dark);
+        flex-direction: column;
+        padding: 100px 40px 40px;
+        transition: all 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+    
+    .nav.active {
+        right: 0;
+        display: flex;
+    }
+    
+    .nav.active .nav-close {
+        display: block;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 1100;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 12px 0;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-cta {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nav-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .logo .logo-cube {
+        font-size: 1.5rem;
+    }
+    
+    .nav {
+        width: 80%;
+        padding: 80px 30px 30px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+    .logo,
+    .logo .logo-cube,
+    .nav-link,
+    .mobile-nav-toggle,
+    .nav-close {
+        transition: none;
+    }
+    
+    .logo:hover {
+        transform: none;
+    }
+    
+    .logo:hover .logo-cube {
+        transform: none;
+    }
+}
+
+/* ========== FOCUS STATES ========== */
+.logo:focus,
+.nav-link:focus,
+.mobile-nav-toggle:focus,
+.nav-close:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}

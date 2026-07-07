@@ -1,0 +1,526 @@
+/* ================================
+   CLIENTS SECTION - LOGHI SEMPRE A COLORI
+   ChemometricSolutions
+   ================================ */
+
+.clients-section {
+    background: linear-gradient(135deg, var(--bg-dark-light) 0%, var(--bg-dark-lighter) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+    box-shadow: inset 0 1px 0 rgba(30, 144, 255, 0.1);
+}
+
+.clients-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clients-title h2 {
+    color: var(--text);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.clients-title p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================================
+   CAROUSEL CONTAINER
+   ================================ */
+.clients-carousel-container {
+    position: relative;
+    padding: 40px 0;
+    background: #ffffff;
+    overflow: hidden;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* ================================
+   OVERLAY GRADIENTS
+   ================================ */
+.clients-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clients-overlay-left {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-dark) 0%, var(--bg-dark-light) 50%, transparent 100%);
+}
+
+.clients-overlay-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-dark) 0%, var(--bg-dark-light) 50%, transparent 100%);
+}
+
+/* ================================
+   DEFAULT - DESKTOP (993px+)
+   ================================ */
+.clients-track {
+    display: flex;
+    will-change: transform;
+    backface-visibility: hidden;
+    width: calc(250px * 32);
+    animation: scrollDesktop 45s linear infinite;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.clients-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollDesktop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 16)); }
+}
+
+.client-logo {
+    width: 250px;
+    height: 200px;
+    padding: 15px 15px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.client-logo img {
+    flex: 1;
+    min-height: 0;
+    width: 180px;
+    height: 140px;
+    object-fit: contain;
+}
+
+/* LOGHI SEMPRE A COLORI - NIENTE GRAYSCALE */
+.client-logo img {
+    max-width: 100%;
+    max-height: 240px;
+    width: 100%;
+    object-fit: contain;
+    filter: none !important;
+    opacity: 1 !important;
+    transition: var(--transition);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* HOVER: Solo scala e ombra, NO cambio colore */
+.client-logo:hover img {
+    transform: scale(1.08);
+}
+
+.client-name {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 0.72rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: var(--transition);
+    min-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.client-logo:hover .client-name {
+    color: var(--secondary);
+}
+
+/* ================================
+   LARGE TABLET (768px - 992px)
+   ================================ */
+@media (max-width: 992px) and (min-width: 769px) {
+    .clients-track {
+        width: calc(200px * 32);
+        animation: scrollLargeTablet 35s linear infinite;
+    }
+    
+    @keyframes scrollLargeTablet {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-200px * 16)); }
+    }
+    
+    .client-logo {
+        width: 200px;
+        height: 140px;
+        padding: 12px;
+    }
+    
+    .client-logo img {
+        max-height: 100px;
+        padding: 8px;
+    }
+    
+    .clients-overlay {
+        width: 80px;
+    }
+    
+    .client-name {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+        margin-top: 6px;
+    }
+}
+
+/* ================================
+   SMALL TABLET (577px - 768px) 
+   ================================ */
+@media (max-width: 768px) and (min-width: 577px) {
+    .clients-section {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+    
+    .clients-carousel-container {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+    
+    .clients-track {
+        width: calc(160px * 32);
+        animation: scrollSmallTablet 25s linear infinite;
+    }
+    
+    @keyframes scrollSmallTablet {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-160px * 16)); }
+    }
+    
+    .client-logo {
+        width: 160px;
+        height: 110px;
+        padding: 10px;
+    }
+    
+    .client-logo img {
+        max-width: 85%;
+        max-height: 70px;
+        padding: 6px;
+        background-color: rgba(255, 255, 255, 0.9);
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .client-logo:active img {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+    }
+    
+    .clients-overlay {
+        width: 60px;
+    }
+    
+    .client-name {
+        font-size: 0.75rem;
+        padding: 3px 5px;
+        margin-top: 5px;
+        min-height: 18px;
+    }
+}
+
+/* ================================
+   MOBILE LARGE (481px - 576px)
+   ================================ */
+@media (max-width: 576px) and (min-width: 481px) {
+    .clients-section {
+        padding: 50px 0;
+        overflow: hidden;
+    }
+    
+    .clients-carousel-container {
+        padding: 18px 0;
+        overflow: hidden;
+    }
+    
+    .clients-track {
+        width: calc(140px * 32);
+        animation: scrollMobileLarge 20s linear infinite;
+    }
+    
+    @keyframes scrollMobileLarge {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-140px * 16)); }
+    }
+    
+    .client-logo {
+        width: 140px;
+        height: 100px;
+        padding: 8px;
+    }
+    
+    .client-logo img {
+        max-width: 80%;
+        max-height: 60px;
+        padding: 4px;
+        background-color: rgba(255, 255, 255, 0.9);
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .client-logo:active img {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+    }
+    
+    .clients-overlay {
+        width: 40px;
+    }
+    
+    .client-name {
+        font-size: 0.7rem;
+        padding: 2px 4px;
+        margin-top: 4px;
+        min-height: 16px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .clients-title h2 {
+        font-size: 1.7rem;
+    }
+    
+    .clients-title p {
+        font-size: 1rem;
+    }
+}
+
+/* ================================
+   MOBILE SMALL (fino a 480px)
+   ================================ */
+@media (max-width: 480px) {
+    .clients-section {
+        padding: 40px 0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .clients-carousel-container {
+        padding: 15px 0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .clients-track {
+        width: calc(110px * 32);
+        animation: scrollMobileSmall 18s linear infinite;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    @keyframes scrollMobileSmall {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(calc(-110px * 16), 0, 0); }
+    }
+    
+    .client-logo {
+        width: 110px;
+        height: 85px;
+        padding: 5px;
+        flex-shrink: 0;
+    }
+    
+    .client-logo img {
+        max-width: 75%;
+        max-height: 48px;
+        padding: 3px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 4px;
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .client-logo:active img {
+        transform: scale(1.15);
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.5);
+    }
+    
+    .clients-overlay {
+        width: 30px;
+    }
+    
+    .client-name {
+        font-size: 0.65rem;
+        padding: 2px 3px;
+        margin-top: 3px;
+        min-height: 14px;
+        line-height: 1.1;
+        margin-left: 3px;
+        margin-right: 3px;
+        font-weight: 700;
+    }
+    
+    .clients-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .clients-title p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+}
+
+/* ================================
+   EXTRA SMALL (fino a 360px)
+   ================================ */
+@media (max-width: 360px) {
+    .clients-carousel-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .clients-track {
+        animation: none;
+        width: auto;
+        gap: 12px;
+        padding: 0 15px;
+    }
+    
+    .client-logo {
+        width: 95px;
+        height: 80px;
+        padding: 4px;
+    }
+    
+    .client-logo img {
+        max-width: 70%;
+        max-height: 45px;
+        padding: 2px;
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .clients-overlay {
+        display: none;
+    }
+    
+    .client-name {
+        font-size: 0.6rem;
+        padding: 1px 2px;
+        margin-top: 2px;
+        min-height: 12px;
+    }
+}
+
+/* ================================
+   CTA STYLING
+   ================================ */
+.clients-cta {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0 25px 0;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.btn-link-cases {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1E90FF;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgba(30, 144, 255, 0.08);
+}
+
+.btn-link-cases:hover {
+    background: rgba(30, 144, 255, 0.15);
+    transform: translateX(3px);
+    color: #4da3ff;
+}
+
+.btn-link-cases i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-link-cases:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 480px) {
+    .btn-link-cases {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+/* ================================
+   ANIMAZIONI
+   ================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+    .clients-track {
+        animation: none;
+    }
+    
+    .client-logo img {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ================================
+   TOUCH DEVICES - LOGHI SEMPRE A COLORI
+   ================================ */
+@media (hover: none) and (pointer: coarse) {
+    .client-name {
+        opacity: 0.9;
+        color: var(--text);
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* IMPORTANTE: Loghi sempre a colori anche su touch */
+    .client-logo img {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .client-logo:active img {
+        transform: scale(1.08);
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+    }
+    
+    .client-logo:active .client-name {
+        background: rgba(30, 144, 255, 0.3);
+        color: var(--secondary);
+    }
+}
